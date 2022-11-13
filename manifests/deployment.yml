@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "ytes-585e"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "ytes-585e"
+  template:
+    metadata:
+      labels:
+        app: "ytes-585e"
+    spec:
+      containers:
+        - name: "ytes-585e"
+          image: "kwicbot.azurecr.io/ytes"
+          ports:
+          - containerPort: 80
